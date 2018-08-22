@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="header clearfix">
+        <h1 class="display-3">S|S</h1>
+        <h6>Software Incident System.</h6>
+       <hr>
+
+       <form class="jumbotron" id="pageL">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" ng-model="vm.username"/>                
+            </div>
+        
+            <div >
+                <label for="password">Password</label>
+                <input type="password" name="password" ng-model="vm.password"/>                
+            </div>
+                
+            <div class="form-actions">
+                <button type="submit" ng-click="vm.logged(vm.username, vm.password)" class="btn btn-primary">Login</button>            
+            </div>
+        </form>
+    </div>
+</div>

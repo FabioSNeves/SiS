@@ -1,0 +1,47 @@
+<div ng-include src="'view/headerAttendant.html'"></div>
+
+	<div class="container">
+		<div id="background" class="jumbotron">
+			<div class="form-group">
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Incident Number</label>
+					<input ng-disabled="true" class="form-control alert-dismissible-alert-light" ng-model="vm.incident.id"</input>
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Title</label>
+					<input ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model="vm.incident.title"></input>
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Status</label>
+					<input ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model="vm.incident.statusDescription">
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Category</label>
+					<input ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model="vm.incident.categoryDescription"></input>
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Collaborator:</label>
+					<input ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model="vm.incident.name"></input>
+					<label class="col-form-label" for="inputLarge">Date Open:</label>
+					<tr>
+						<td ng-disabled="true" class="form-control form-control-lg alert alert-dismissible alert-light">{{vm.incident.dateOpen | date:'dd-MM-yyyy'}}</td>
+					</tr>
+			</div>
+
+			<div class="form-group">
+				<label class="col-form-label col-form-label-lg" for="inputLarge">Description</label>
+				<textarea ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model= "vm.incident.description"></textarea>
+			</div>
+
+			<div class="form-group">
+				<label class="col-form-label col-form-label-lg" for="inputLarge">Response</label>
+				<textarea class="form-control alert-dismissible-alert-light" ng-model="vm.incident.response" name="response" rows="2"></textarea>
+			</div>
+
+			<div class="form-group">
+				<select class="col-form-label-small h6" name="Select" for="statusIF" ng-model="vm.incident.statusId" class="custom-select">
+					<option value="" selected disabled hidden>Choose status for update</option>
+					<option ng-show="vm.incident.statusDescription=='Finished'" ng-model="vm.incident.status.Id" value="1">Open</option>
+					<option ng-show="vm.incident.statusDescription=='New'" ng-model="vm.incident.statusId" value="2">Assigned</option>
+					<option ng-show="vm.incident.statusDescription=='InProgress'" ng-model="vm.incident.statusId" value="3">Closed</option>
+				</select>
+			</div>
+
+			<fieldset>
+				<button class="btn btn-primary btn-sm" ng-click="vm.save(vm.incident)">Save</button>
+				<a class="btn btn-dark btn-lg" ui-sref="homeAttendant">Back</a>
+			</fieldset>
+		</div>
+	</div>
+</div>

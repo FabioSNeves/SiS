@@ -1,0 +1,47 @@
+#page
+{
+    background-color: rgb(230, 221, 221);
+}
+
+#head{
+    color: black;
+
+}
+
+.card-header{
+    border-radius: 20pt;
+}
+
+#jumbotron-1{
+    background-color: #ffebae;
+}
+
+#container
+{
+    padding: 3%;
+    height: 140px; background-color: rgb(241, 175, 175);
+}
+
+#h1{
+    float: none; 
+    text-align: center;
+    position: relative;
+}
+
+#h3 {
+    background-color: black;
+    text-align: center;   
+    color: black;    
+}
+
+#footer{
+    position: absolute;
+    bottom:0;
+    left:0;    
+    text-align: center;
+    align-content: center;    
+}
+
+.input-group.md-form.form-sm.form-2 input.amber-border  {
+    border: 1px solid #ffca28;
+}

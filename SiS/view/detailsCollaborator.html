@@ -1,0 +1,50 @@
+<div ng-include src="'view/headerCollaborator.html'"></div>
+
+<div class="container-bg-warning">
+	<div class="container">
+		
+			<input ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model="vm.incident.name"></input>
+
+			<div class="jumbotron bg-white">
+				<div class="form-group">
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Incident Number</label>
+					<input ng-disabled="true" class="form-control alert-dismissible-alert-light" ng-model="vm.incident.id"></input>
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Title</label>
+					<input ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model="vm.incident.title"></input>
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Status</label>
+					<input ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model="vm.incident.statusDescription">
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Category</label>
+					<input ng-disabled="true" class="form-control form-control-lg alert-dismissible-alert-light" ng-model="vm.incident.categoryDescription">
+					<label class="col-form-label" for="inputLarge">Date Open:</label>
+					<tr>
+						<td ng-disabled="true" class="form-control form-control-lg alert alert-dismissible alert-light">{{vm.incident.dateOpen | date:'dd-MM-yyyy'}}</td>
+					</tr>
+				</div>
+
+				<div class="form-group">
+					<label class="col-form-label col-form-label-lg" for="inputLarge">Description</label>
+					<textarea ng-disabled="true" class="form-control alert-dismissible-alert-light" ng-model="vm.incident.description" name="response"
+					 rows="4"></textarea>
+				</div>
+
+				<div class="form-group">
+						<label class="col-form-label col-form-label-lg" for="inputLarge">Response from the Attendant</label>
+						<textarea ng-disabled="true" class="form-control alert-dismissible-alert-light" ng-model="vm.incident.response" name="response"
+						 rows="3"></textarea>
+				</div>
+
+				<div class="form-group">
+						<select ng-show="vm.incident.statusDescription=='Finished'" class="col-form-label-small h6" name="Select" for="statusIF" ng-model="vm.incident.statusId" class="custom-select">
+							<option value="" selected disabled hidden>Update for Status</option>
+							<option  ng-model="vm.incident.status.Id" value="1">Open</option>
+						</select>
+				</div>
+
+				<fieldset>
+					<button class="btn btn-primary btn-sm" ng-click="vm.save(vm.incident)">Save</button>
+					<a class="btn btn-dark" ui-sref="homeCollaborator">Back</a>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>SiS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link href="lib/bootstrap/bootstrap.css">
+  <link href="css/login.css" rel="stylesheet">
+  <link href="css/homeCollaborator.css" rel="stylesheet">
+  <link href="css/homeAttendant.css" rel="stylesheet">
+  <link href="css/detailsAttendant.css" rel="stylesheet">
+  <link href="css/createIncident.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+  
+
+  <ui-view></ui-view>
+
+  <div ng-include="'view/footer.html'"></div>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+  <script src="js/module.js"></script>
+  <script src="js/value/configValue.js"></script>
+  <script src="js/services/incidentAPI.js"></script>
+  <script src="js/services/loginAPI.js"></script>
+  <script src="js/controllers/loginController.js"></script>
+  <script src="js/controllers/detailsAttendantCtrl.js"></script>
+  <script src="js/controllers/detailsCollaboratorCtrl.js"></script>
+  <script src="js/controllers/homeCollaboratorCtrl.js"></script>
+  <script src="js/controllers/homeAttendantCtrl.js"></script>
+  <script src="js/controllers/createIncidentCtrl.js"></script>
+
+</body>
+</html>

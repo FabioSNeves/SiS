@@ -1,0 +1,42 @@
+<div ng-include src="'view/headerCollaborator.html'"></div>
+
+<fieldset class="container-bg-warning">
+	<div class="container">	
+		<input class="form-control h6" type="text" ng-model="incidentSearch" placeholder="Search Incident">
+		<table class="table table-hover">
+			<thead class="table-dark">
+			<tr>
+				<th>
+					<h6 href="" ng-click="orderBy('id')">Number</h6>
+				</th>
+				<th>
+					<h6 href="" ng-click="orderBy('title')">Title</h6>
+				</th>
+				<th>
+					<h6 href="" ng-click="orderBy('status')">Category</h6>
+				</th>
+				<th>
+					<h6 href="" ng-click="orderBy('status')">Status</h6>
+				</th>
+				<th>
+					<h6 href="" ng-click="orderBy('date')">Date</h6>
+				</th>
+				<th></th>
+			</tr>
+			</thead>
+
+			<tr class="h6" ng-repeat="incident in incidents | filter:incidentSearch">
+				<td>{{incident.id}}</td>
+				<td>{{incident.title}}</td>
+				<td>{{incident.categoryDescription}}</td>
+				<td>{{incident.statusDescription}}</td>
+				<td>{{incident.dateOpen | date: 'dd-MM-yyyy'}}</td>
+				<td>
+					<p>
+						<a id="a" ng-click="vm.incidentDetails(incident.id)" class="btn btn-dark btn-sm">Details</a>
+					</p>
+				</td>
+			</tr>		
+		</table>
+</fieldset>
+</div>

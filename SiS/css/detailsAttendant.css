@@ -1,0 +1,47 @@
+#page
+{
+    background-color: rgb(230, 221, 221);
+}
+
+#container-dtls
+{
+    padding: 3%;
+    background-color: rgb(196, 248, 205);
+}
+
+#h1{
+    float: none; 
+    text-align: center;
+    size: 10px;
+}
+
+.alert-dismissible-alert-light{
+    text-align: center; 
+    font-size: 77%;
+}
+
+#background{
+ background: rgb(231, 224, 224);
+}
+
+#h3 {
+    background-color: rgb(121, 121, 121);
+    text-align: center;   
+    color: black;    
+}
+
+#footer{
+    position: absolute;
+    bottom:0;
+    left:0;    
+    text-align: center;
+}
+
+.input-group.md-form.form-sm.form-2 input.amber-border  {
+    border: 1px solid #ffca28;
+}
+
+#float-md-right {
+    width:150px;
+    margin-right:3px;
+}
